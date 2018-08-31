@@ -5,16 +5,16 @@
     $ heroku login
 
 ## Adding SSH keys
-$ heroku keys:add
+    $ heroku keys:add
 
 ## List SSH keys on account
-$ heroku keys
+    $ heroku keys
 
 ## Remove SSH keys on account
-$ heroku keys:remove
+    $ heroku keys:remove
 
 ## Test SSH keys with Heroku
-$ ssh -v git@heroku.com
+    $ ssh -v git@heroku.com
 
 ## Application Port
 
@@ -25,7 +25,7 @@ using `process.env.PORT` environment variable.
 
 Setup a `start` script in package.json for the Heroku to start the app:
 
-  $ "start": "node server/server.js"
+    $ "start": "node server/server.js"
 
 This is necessary because Heroku doesn't know the name of the file to use to start the app.
 
@@ -33,14 +33,14 @@ This is necessary because Heroku doesn't know the name of the file to use to sta
 
 Run `heroku create` from within the application:
 
-$ heroku create
+    $ heroku create
 
 This will add a remote for Heroku:
 
-$ git remote -vv
-heroku	https://git.heroku.com/hidden-scrubland-50797.git (fetch)
-heroku	https://git.heroku.com/hidden-scrubland-50797.git (push)
+    $ git remote -vv
+    heroku	https://git.heroku.com/hidden-scrubland-50797.git (fetch)
+    heroku	https://git.heroku.com/hidden-scrubland-50797.git (push)
 
 Now use `git push` to push the application up to Heroku
 
-$ git push heroku master
+    $ git push heroku master
