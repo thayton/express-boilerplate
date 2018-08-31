@@ -1,8 +1,8 @@
 # Deplying to Heroku
 
 ## Logging in
-  $ heroku help
-  $ heroku login
+    $ heroku help
+    $ heroku login
 
 ## Adding SSH keys
 $ heroku keys:add
