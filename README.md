@@ -25,8 +25,14 @@ using `process.env.PORT` environment variable.
 
 Setup a `start` script in package.json for the Heroku to start the app:
 
-    $ "start": "node server/server.js"
-
+    {
+        ...
+        "scripts": {
+            "start": "node server/server.js"
+            ...
+        }
+    }
+    
 This is necessary because Heroku doesn't know the name of the file to use to start the app.
 
 ## Push up application to Heroku
@@ -44,3 +50,7 @@ This will add a remote for Heroku:
 Now use `git push` to push the application up to Heroku
 
     $ git push heroku master
+
+To open the application in your web browser use:
+
+    $ heroku open
