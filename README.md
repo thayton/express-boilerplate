@@ -1,3 +1,9 @@
+# Initialize package.json
+    $ npm init -y
+    
+## Install express
+    $ npm install express --save
+    
 # Deplying to Heroku
 
 ## Logging in
