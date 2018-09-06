@@ -1,9 +1,18 @@
 # Initialize package.json
     $ npm init -y
-    
+
+# Express
+
 ## Install express
     $ npm install express --save
     
+## Handling Static Routes
+Use the [express.static()](http://expressjs.com/en/starter/static-files.html) middleware to specify directory containing the static files:
+
+```javascript
+app.use(express.static(__dirname + '/public'));
+```
+
 # Deplying to Heroku
 
 ## Logging in
