@@ -10,7 +10,11 @@
 Use the [express.static()](http://expressjs.com/en/starter/static-files.html) middleware to specify directory containing the static files:
 
 ```javascript
+// file access at http://127.0.0.1:3000/style.css
 app.use(express.static(__dirname + '/public'));
+
+// file access at http://127.0.0.1:3000/public/style.css
+app.use('/public', express.static(process.cwd() + '/public'));
 ```
 
 # Deplying to Heroku
