@@ -16,7 +16,23 @@ app.use(express.static(__dirname + '/public'));
 // file access at http://127.0.0.1:3000/public/style.css
 app.use('/public', express.static(process.cwd() + '/public'));
 ```
+## Using Handlebars Templating Engine
 
+Install [hbs](https://www.npmjs.com/package/hbs)
+
+    $ npm install hbs --save
+
+Then configure express to use handlebars:
+
+```javascript
+const hbs = require('hbs');
+app.set('view engine', 'hbs');
+```
+
+Create a `views/` sub-directory (views is the default directory Express uses for templates)
+
+    $ mkdir views
+    
 # Deplying to Heroku
 
 ## Logging in
