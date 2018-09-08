@@ -33,6 +33,25 @@ Create a `views/` sub-directory (`views/` is the default directory Express uses 
 
     $ mkdir views
     
+Use `res.render()` to inject variables into the hbs files:
+
+```javascript
+    res.render('about.hbs', {
+        pageTitle: 'About Page',
+        currentYear: new Date().getFullYear()
+    });
+```
+
+`pageTitle` and `currentYear` can then be used within `about.hbs`:
+
+```html
+    <h1>{{ pageTitle }}</h1>
+    <p>Some text here</p>
+    <footer>
+      <p>Copyright {{ currentYear }}</p>
+    </footer>
+```
+
 # Deplying to Heroku
 
 ## Logging in
