@@ -29,7 +29,7 @@ const hbs = require('hbs');
 app.set('view engine', 'hbs');
 ```
 
-Create a `views/` sub-directory (views is the default directory Express uses for templates)
+Create a `views/` sub-directory (`views/` is the default directory Express uses for templates)
 
     $ mkdir views
     
