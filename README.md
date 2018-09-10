@@ -52,6 +52,18 @@ Use `res.render()` to inject variables into the hbs files:
     </footer>
 ```
 
+To use partials, use `registerPartials` to specify the directory containing the partials:
+
+```javascript
+hbs.registerPartials(__dirname + '/views/partials');
+```
+
+To include a partial within an hbs file:
+
+```javascript
+{{> footer }}
+```
+
 # Deplying to Heroku
 
 ## Logging in
