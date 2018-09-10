@@ -58,7 +58,7 @@ To use partials, use `registerPartials` to specify the directory containing the 
 hbs.registerPartials(__dirname + '/views/partials');
 ```
 
-To include a partial within an hbs file:
+Then, too include a partial (eg. `/views/partials/footer.hbs`) within an hbs file:
 
 ```javascript
 {{> footer }}
