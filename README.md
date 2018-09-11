@@ -80,10 +80,22 @@ and then in the templates you can use `{{ getCurrentYear}}` or `{{ screamIt 'upp
 
 ## Express Middleware
 
+Use `app.use()` to register middleware:
+
 ```javascript
+const fs = require('fs');
+
 app.use((req, res, next) => {
   var now = new Date().toString();
-  console.log(`${now}: ${req.method} ${req.url}`);
+  var log = `${now}: ${req.method} ${req.url}`;
+  
+  fs.appendFile('server.log', log + '\n', (err) => {
+    if (err) {
+      console.log('Unable to append to server.log');
+    }
+  });
+  
+  console.log(log);
   next();
 });
 ````
