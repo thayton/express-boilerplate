@@ -80,7 +80,7 @@ and then in the templates you can use `{{ getCurrentYear}}` or `{{ screamIt 'upp
 
 ## Express Middleware
 
-Use `app.use()` to register middleware:
+Use `app.use()` to register middleware. The middleware will be executed according to the order you call to `app.use()`:
 
 ```javascript
 const fs = require('fs');
