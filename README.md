@@ -76,7 +76,7 @@ hbs.registerHelper('screamIt', (text) => {
 });
 ```
 
-and then in the templates you can use `{{ getCurrentYear}}` or `{{ screamIt 'upper case me' }}`, or {{ screamIt textVar }}` to run the functions.
+and then in the templates you can use `{{ getCurrentYear}}` or `{{ screamIt 'upper case me' }}`, or `{{ screamIt textVar }}` to run the functions.
 
 # Deplying to Heroku
 
