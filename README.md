@@ -78,6 +78,16 @@ hbs.registerHelper('screamIt', (text) => {
 
 and then in the templates you can use `{{ getCurrentYear}}` or `{{ screamIt 'upper case me' }}`, or `{{ screamIt textVar }}` to run the functions.
 
+## Express Middleware
+
+```javascript
+app.use((req, res, next) => {
+  var now = new Date().toString();
+  console.log(`${now}: ${req.method} ${req.url}`);
+  next();
+});
+````
+
 # Deplying to Heroku
 
 ## Logging in
