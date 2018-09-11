@@ -64,6 +64,16 @@ Then, too include a partial (eg. `/views/partials/footer.hbs`) within an hbs fil
 {{> footer }}
 ```
 
+Handlebars helpers can be used for common functions. For example, to get the current year:
+
+```javascript
+hbs.registerHelper('getCurrentYear', () => {
+    return new Date().getFullYear();
+});
+```
+
+and then in the templates you can use `{{ getCurrentYear}}` to run the function.
+
 # Deplying to Heroku
 
 ## Logging in
