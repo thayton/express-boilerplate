@@ -16,10 +16,15 @@ var app = express();
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
+app.get('/query', (req, res) => {
+  let q = req.query.q;
+  res.send(`Got query ${q}`);
+});
+
 // POST http://localhost:8080/api/users
 // parameters sent with 
-app.post('/api/users', function(req, res) {
-    var user_id = req.body.id;
+app.post('/api/users', (req, res) => {
+    var id = req.body.id;
     var token = req.body.token;
     var geo = req.body.geo;
 
