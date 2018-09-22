@@ -6,6 +6,33 @@
 ## Install express
     $ npm install express --save
     
+## Basic Routes
+```javascript
+const express = require('express');
+const bodyParser = require('body-parser');
+
+var app = express();
+
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
+
+// POST http://localhost:8080/api/users
+// parameters sent with 
+app.post('/api/users', function(req, res) {
+    var user_id = req.body.id;
+    var token = req.body.token;
+    var geo = req.body.geo;
+
+    res.send(user_id + ' ' + token + ' ' + geo);
+});
+
+app.listen(port, () => {
+    console.log(`Started on port ${port}`);
+});
+```
+## Debugging
+
+
 ## Handling Static Routes
 Use the [express.static()](http://expressjs.com/en/starter/static-files.html) middleware to specify directory containing the static files:
 
